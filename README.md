@@ -1,4 +1,4 @@
 aurorachiarello.com
 ===================
 
-Repositry for my website aurorachiarello.com.
+Repository for my website aurorachiarello.com.
