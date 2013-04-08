@@ -64,7 +64,6 @@
 .footer a{
 	text-decoration: none;
 	color: #EDA573;
-
 }
 
 .footer a:hover{
@@ -113,7 +112,7 @@
 	display: block;
 	padding-top: 35px;
 	padding-bottom: 25px;
-	max-height: 40%;
+	max-width: 65%;
 }
 
 .me img{
@@ -122,7 +121,7 @@
 	display: block;
 	padding-top: 35px;
 	padding-bottom: 25px;
-	max-height: 40%;
+	max-width: 65%;
 }
 
 .education img{
@@ -131,7 +130,7 @@
 	display: block;
 	padding-top: 35px;
 	padding-bottom: 25px;
-	max-height: 40%;
+	max-width: 65%;
 }
 
 #experience-text{
@@ -253,7 +252,7 @@
 }
 
 
- /* Carousel base class */
+/*-------Carousel base class-------*/
  
     .carousel {
       background-color: #FFFFFF;
@@ -370,10 +369,7 @@ i.ss-icon{
 
 
     
-   
        
-       
- /*-------------------------------------------*/      
 /*--------------- RESPONSIVE CSS---------------*/
 
 /* Large desktop */
@@ -423,7 +419,7 @@ i.ss-icon{
 }
 
 .experience{
-	height: 700px;
+	height: 600px;
 	background-color: #FFFFFF;
 	margin-top: 20%;
 	border: 5px solid #EDA573;	
@@ -432,7 +428,7 @@ i.ss-icon{
 
 .me{
 	background-color: #FFFFFF;
-	height: 700px;
+	height: 600px;
 	margin-top: 20%;
 	border: 5px solid #EDA573;
 	border-radius: 15px;
@@ -440,7 +436,7 @@ i.ss-icon{
 
 .education{
 	background-color: #FFFFFF;
-	height: 700px;
+	height: 600px;
 	margin-top: 20%;
 	border: 5px solid #EDA573;
 	border-radius: 15px;
@@ -577,15 +573,14 @@ i.ss-icon{
 /*-------Folio-------*/    
 .folio{
 	display: block;
-	min-height: 550px;	
+	min-height: 650px;	
 }
 
 .folio-container{
 	margin-top:15%;
 }
 
- /* Carousel base class */
- 
+/*-------Carousel base class-------*/ 
     .carousel {
       background-color: #FFFFFF;
     }
@@ -876,7 +871,6 @@ i.ss-icon{
 }
 	
 /*-------Folio-------*/    
-   
 .folio{
     display:none;
 }
