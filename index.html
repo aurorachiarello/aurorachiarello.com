@@ -212,11 +212,13 @@
 	</div>		
 
 
-<!-- Javascript -->
-    <script src="assets/js/jquery.js"></script>
+<!-- Javascript --> 
+    <script src="assets/js/jquery.js"></script> 
     <script src="assets/js/bootstrap.min.js"></script>
 	<script>
-	$(function() {
+
+	$(document).ready(function() {
+
 	
 		function filterPath(string) {
 			return string
@@ -226,8 +228,14 @@
 		}
 	
 		var locationPath = filterPath(location.pathname);
-		var scrollElem = scrollableElement('html', 'body');
-	
+
+		var scrollElem = $('html');
+		if($.browser.safari || $.browser.chrome) {
+			scrollElem = $("body");
+		} 	
+		
+		
+
 		// Any links with hash tags in them (can't do ^= because of fully qualified URL potential)
 		$('.navigation').find('a[href*=#]').each(function() {
 			// Ensure it's a same-page link
@@ -242,13 +250,15 @@
 	
 						// Find location of target
 						var targetOffset = $target.offset().top;
-						$(this).click(function(event) {
-	
+						$(this).on("click", function(event) {
+
+
 							// Prevent jump-down
 							event.preventDefault();
 	
 							// Animate to target
 							$(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+	
 	
 								// Set hash in URL after animation successful
 								location.hash = target;
@@ -259,18 +269,18 @@
 			}
 	
 		});
-	
+
 		// Use the first element that is "scrollable"  (cross-browser fix?)
 		function scrollableElement(els) {
 			for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-				var el = arguments[i],
-				$scrollElement = $(el);
-				if ($scrollElement.scrollTop()> 0) {
+				var el = arguments[i];
+			        scrollElement = $(el);
+				if (scrollElement.scrollTop()> 0) {
 					return el;
 				} else {
-					$scrollElement.scrollTop(1);
-					var isScrollable = $scrollElement.scrollTop()> 0;
-					$scrollElement.scrollTop(0);
+					scrollElement.scrollTop(1);
+					var isScrollable = scrollElement.scrollTop()> 0;
+					scrollElement.scrollTop(0);
 					if (isScrollable) {
 						return el;
 					}
