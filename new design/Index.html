@@ -32,18 +32,217 @@
             
         </div>        
     </div>
-        
+      
+    <div class="scroll row-fluid">
+        <div class="span1 offset8">
+            <a class="scrollup" href="#">Scroll</a>
+        </div>    
+    </div> 
+    
+    
 <!-- Profile --> 
     <div class="profile row-fluid" id="two">
         <div class="content span4 offset4">
-           <strong> Currently a Hybrid Designer + Developer.</strong> <br><br> I have been a creative Graphic Designer over the last five years and have worked my way into a web designer and developer in my free time. <br><br> I find that I am a quick and eager learner and very much inspired by new developments, theories and technology.<br><br>My key is to always look on the bright side of life. Indulge in food and coffee, and to be taken away with music, design and art. <br><br> I completed a Bachelor of Design Arts (Graphic Design) at the Australian Academy of Design in Port Melbourne (2008). And mastered skills over the years in the following programs and languages: Adobe CS Suite including InDesign, Illustrator, Photoshop, Edge Code, Flash and Dreamweaver. HTML, CCS, Javascript, Terminal, Github and Coda2.
+           <span id="underline"><strong> Currently a Hybrid Designer + Developer.</strong></span> <br><br> I have been a creative Graphic Designer over the last five years and have worked my way into a web designer and developer in my free time. <br><br> I find that I am a quick and eager learner and very much inspired by new developments, theories and technology.<br><br>My key is to always look on the bright side of life. Indulge in food and coffee, and to be taken away with music, design and art. <br><br> I completed a Bachelor of Design Arts (Graphic Design) at the Australian Academy of Design in Port Melbourne (2008). And mastered skills over the years in the following programs and languages: Adobe CS Suite including InDesign, Illustrator, Photoshop, Edge Code, Flash and Dreamweaver. HTML, CCS, Javascript, Terminal, Github and Coda2.
         </div>
     </div>    
       
+    
 <!-- Folio --> 
-    <div class="profile row-fluid" id="two">
-    </div>        
+    <div class="folio row-fluid" id="three">
+        <div class="image-list span4 offset4">
+            <span id="underline"><strong> Selected Folio Elements.</strong></span><br> 
+            <div class="image">
+                <img src="img/slide-01.jpg">
+            </div>
+            <div class="image">
+                <img src="img/slide-02.jpg">
+            </div>
+            <div class="image">
+                <img src="img/slide-03.jpg">
+            </div>
+            <div class="image">
+                <img src="img/slide-04.jpg">
+            </div>
+            <div class="image">
+                <img src="img/slide-05.jpg">
+            </div>
+            <div class="image">
+                <img src="img/slide-06.jpg">
+            </div>
+            <div class="image">
+                <img src="img/slide-07.jpg">
+            </div>
+            <div class="image">
+                <img src="img/slide-08.jpg">
+            </div>             
+        </div>
+    </div>   
+    
+    
+    
+<!-- Contact -->     
+    <div class="contact row-fluid" id="four">
+        <div class="contact-buttons span4 offset4">
+            <span id="underline"><strong>Say Hello + View my Creative Profiles.</strong></span><br><br>
+            Feel free to contact me if you require any of my skills. <br>
+            Click on the links to view more of more design + development folio online.
+            <ul>
+                <li class="span2">
+                    <a href="mailto:chiarello.aj@gmail.com"> <i class="ss-icon"> &#x2709;</i>
+                     <p>Email</p> </a>
+                </li>    
+        
+                <li class="span2">
+                    <a href="http://www.behance.net/aurorachiarello"> <i class="ss-icon"> &#xF661;</i>
+                     <p>Behance</p> </a>         
+                </li>    
+        
+                <li class="span2">
+                    <a href="https://github.com/aurorachiarello"> <i class="ss-icon"> &#xF671;</i>
+                     <p>GitHub</p> </a>         
+                </li>
+    
+                <li class="span2">
+                    <a href="https://twitter.com/ChiarelloAurora"> <i class="ss-icon">  &#xF611;</i>
+                     <p>Twitter</p> </a>          
+                </li>   
+                
+                <li class="span2">
+                    <a href="http://pinterest.com/aurora87/"> <i class="ss-icon"> &#xF650;</i>
+                     <p>Pinterest</p> </a>
+                </li>    
+            </ul>
+        </div>	
+    </div>    
 
+    
+    
+<!-- Footer -->     
+    <div class="footer row-fluid">
+        <div class="footer-content span4 offset4">
+            <p id="footer">© 2013 This page was designed and developed by <a href="http://www.aurorachiarello.com/"> aurora chiarello</a>.</p>
+        </div> 
+    </div>   
+    
+    
+    
+<!-- Javascript --> 
+    <script src="assets/js/jquery.js"></script> 
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script>
+
+	$(document).ready(function() {
+
+	
+		function filterPath(string) {
+			return string
+			.replace(/^\//,'')
+			.replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+			.replace(/\/$/,'');
+		}
+	
+		var locationPath = filterPath(location.pathname);
+
+		var scrollElem = $('html');
+		if($.browser.safari || $.browser.chrome) {
+			scrollElem = $("body");
+		} 	
+		
+		
+
+		// Any links with hash tags in them (can't do ^= because of fully qualified URL potential)
+		$('.navigation').find('a[href*=#]').each(function() {
+			// Ensure it's a same-page link
+			var thisPath = filterPath(this.pathname) || locationPath;
+			if (  locationPath == thisPath
+				&& (location.hostname == this.hostname || !this.hostname)
+				&& this.hash.replace(/#/,'') ) {
+	
+					// Ensure target exists
+					var $target = $(this.hash), target = this.hash;
+					if (target) {
+	
+						// Find location of target
+						var targetOffset = $target.offset().top;
+						$(this).on("click", function(event) {
+
+
+							// Prevent jump-down
+							event.preventDefault();
+	
+							// Animate to target
+							$(scrollElem).animate({scrollTop: targetOffset}, 500, function() {
+	
+	
+								// Set hash in URL after animation successful
+								location.hash = target;
+	
+							});
+						});
+					}
+			}
+	
+		});
+
+		// Use the first element that is "scrollable"  (cross-browser fix?)
+		function scrollableElement(els) {
+			for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+				var el = arguments[i];
+			        scrollElement = $(el);
+				if (scrollElement.scrollTop()> 0) {
+					return el;
+				} else {
+					scrollElement.scrollTop(1);
+					var isScrollable = scrollElement.scrollTop()> 0;
+					scrollElement.scrollTop(0);
+					if (isScrollable) {
+						return el;
+					}
+				}
+			}
+			return [];
+		}
+	
+	});
+	</script>
+	
+    <script>
+    // scroll-to-top button show and hide
+jQuery(document).ready(function(){
+    jQuery(window).scroll(function(){
+        if (jQuery(this).scrollTop() > 100) {
+            jQuery('.scrollup').fadeIn();
+        } else {
+            jQuery('.scrollup').fadeOut();
+    }
+});
+    
+// scroll-to-top animate
+jQuery('.scrollup').click(function(){
+    jQuery("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+});
+   </script> 
+    
+    
+    
+	<script type="text/javascript">
+ 
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38777381-1']);
+	  _gaq.push(['_trackPageview']);
+	 
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	 
+	</script>  
+    
+    
 
 </body>
 </html>    
