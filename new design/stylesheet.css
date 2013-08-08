@@ -9,48 +9,74 @@ html,body{
     background-repeat: repeat;
 } 
 
-/*-------Navigation-------*/    
+/*-------Home/Navigation-------*/    
 .navigation{
-	position: fixed;
     width: 100%;
-	z-index: 10;
+    margin-top: 30px;    
     margin-left:0 !important;
     text-align:center;
 }
 
 .navigation-list{
-    margin-top: 30px;    
+    margin-top: 10px;    
 }
-.navigation ul{
+
+.navigation-list ul{
     margin-left: 0;
     text-align: center;
 }
 
-.navigation li{
+.navigation-list li{
     display:inline;
 	list-style-type: none;
 	margin-right: 20px;
 	margin-left: 20px;
-    border-bottom: 2px solid #FBB15B;
 }
 
-.navigation a{
-	font-family: 'Antic Slab', serif;;
-	font-weight: 300;
+.navigation-list a{
+	font-family: 'Antic Slab', serif;
 	font-size: 13px;
 	color:	black;
     text-transform: uppercase;
-    font-stretch:expanded;
+    letter-spacing: 2px;
     text-decoration: none;
     padding-bottom: 2px;
+    border-bottom: 2px solid #FBB15B;
+    text-align: center;
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    -ms-transition: all .7s ease;
+    transition: all .7s ease;
 }
 
-.navigation a:hover{
+.navigation-list a:hover{
 	color:	#808080;
 	text-decoration: none;
+    border-bottom: 2px solid black;
 }
 
 #logo img{
     width: 24%;
     margin-top: 10px;
+}
+
+
+
+/*-------Profile-------*/  
+
+.profile{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.content{
+    background-color: white;
+    font-family: 'Antic Slab', serif;
+    font-size: 11px;
+	color:	black;
+    padding: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
 }
