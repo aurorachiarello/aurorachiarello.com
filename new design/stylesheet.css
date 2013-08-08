@@ -35,7 +35,7 @@ html,body{
 
 .navigation-list a{
 	font-family: 'Antic Slab', serif;
-	font-size: 13px;
+	font-size: 15px;
 	color:	black;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -73,19 +73,19 @@ html,body{
 .content{
     background-color: white;
     font-family: 'Antic Slab', serif;
-    font-size: 11px;
+    font-size: 13px;
 	color:	black;
-    padding: 20px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+    padding: 40px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
     -webkit-box-shadow: 0 2px 2px -2px #808080;
     -moz-box-shadow: 0 2px 2px -2px #808080;
     box-shadow: 0 2px 2px -2px #808080;
 }
 
 #underline{
-    font-size: 13px;
+    font-size: 15px;
     border-bottom: 2px solid #FBB15B;
 }
 
@@ -96,10 +96,10 @@ html,body{
 .image-list{
     font-family: 'Antic Slab', serif;
 	color:	black;
-    padding: 20px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+    padding: 40px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
     -webkit-box-shadow: 0 2px 2px -2px #808080;
     -moz-box-shadow: 0 2px 2px -2px #808080;
     box-shadow: 0 2px 2px -2px #808080;
@@ -107,9 +107,9 @@ html,body{
 }
 
 .image img{
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
     -webkit-box-shadow: 0 2px 2px -2px #808080;
     -moz-box-shadow: 0 2px 2px -2px #808080;
     box-shadow: 0 2px 2px -2px #808080; 
@@ -128,14 +128,14 @@ html,body{
 
 .contact-buttons{
     font-family: 'Antic Slab', serif;
-    font-size: 11px;
+    font-size: 13px;
 	color:	black;
     display: inline;
     background-color: white;
-    padding: 20px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+    padding: 40px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
     -webkit-box-shadow: 0 2px 2px -2px #808080;
     -moz-box-shadow: 0 2px 2px -2px #808080;
     box-shadow: 0 2px 2px -2px #808080;
@@ -162,7 +162,7 @@ html,body{
 .contact-buttons ul li a p{
     border-bottom: 2px solid black;
     font-family: 'Antic Slab', serif;
-    font-size: 8px;
+    font-size: 10px;
 	color:	black;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -206,13 +206,13 @@ i.ss-icon{
 .footer-content{
     background-color: #FBB15B;
     font-family: 'Antic Slab', serif;
-    font-size: 9px;
-    line-height: 12px;
+    font-size: 11px;
+    line-height: 14px;
 	color:	white;
     text-align:center;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
     -webkit-box-shadow: 0 2px 2px -2px #808080;
     -moz-box-shadow: 0 2px 2px -2px #808080;
     box-shadow: 0 2px 2px -2px #808080;
@@ -330,6 +330,7 @@ i.ss-icon{
     #footer-content{
         padding-bottom: 0px;
         font-size: 7px !important;
+        line-height: 9px;
     }
 
     #logo img{
