@@ -66,7 +66,7 @@ html,body{
 /*-------Profile-------*/  
 
 .profile{
-    margin-top: 60px;
+    margin-top: 90px;
     margin-bottom: 60px;
 }
 
@@ -145,18 +145,18 @@ html,body{
 .contact-buttons ul{
 	text-align: center;
 	list-style-type: none;
-    margin-left: 0 !important;
     margin-bottom: 0px !important;
     padding-top: 20px;
+    margin-left: 0 !important;
 }
 
 .contact-buttons ul li{
     display: inline;
-    padding-left: 5px;
-    padding-right: 5px;
     padding-top: 10px;
     text-align:center;
-    margin-right: 10px;
+    margin-left: 0 !important;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 .contact-buttons ul li a p{
@@ -184,7 +184,7 @@ html,body{
 
 i.ss-icon{
 	color: #808080;
-	font-size: 55px;
+	font-size: 50px;
 	text-align: center;
     line-height: 55px;
     -webkit-transition: all .7s ease;
@@ -207,6 +207,7 @@ i.ss-icon{
     background-color: #FBB15B;
     font-family: 'Antic Slab', serif;
     font-size: 9px;
+    line-height: 12px;
 	color:	white;
     text-align:center;
     -webkit-border-radius: 15px;
@@ -216,10 +217,11 @@ i.ss-icon{
     -moz-box-shadow: 0 2px 2px -2px #808080;
     box-shadow: 0 2px 2px -2px #808080;
     margin-bottom: 20px;
+    vertical-align: middle;
 }
 
 #footer{
-    padding-top: 12px;
+    padding-top: 10px;
 }
 
 #footer a{
@@ -240,14 +242,104 @@ i.ss-icon{
     border-bottom: 2px solid black;    
 }    
 
+
+
+/*-------Scroll-------*/  
+
 .scrollup {
     background: url("img/scroll.png") no-repeat scroll 0 0 transparent;
     bottom: 20px;
     display: none;
-    height: 40px;
+    height: 70px;
     position: fixed;
     right: 20px;
     text-indent: -9999px;
     width: 40px;
     z-index: 100;
+}
+
+
+/*-------Responsive-------*/  
+
+/* Large desktop */
+@media (min-width: 1200px) { ... }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {     
+    html,body{
+        margin-left:25px !important;
+        margin-right:25px !important;
+    }  
+    
+    i.ss-icon{
+        color: #808080;
+        font-size: 25px;
+        text-align: center;
+        line-height: 55px;
+        -webkit-transition: all .7s ease;
+        -moz-transition: all .7s ease;
+        -o-transition: all .7s ease;
+        -ms-transition: all .7s ease;
+        transition: all .7s ease;
+    }
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+    html,body{
+        margin-left:20px !important;
+        margin-right:20px !important;
+    }  
+
+    .scrollup {
+        height: 110px;
+    }
+    
+    .footer-content{
+        padding-top: 3px;
+        padding-bottom: 5px;
+    }
+
+   
+    #logo img{
+        width: 35%;
+        margin-top: 10px;
+    }
+
+    .navigation{
+        margin-top: 5px;
+    }
+    
+    .navigation-list{
+        margin-bottom: 10px;    
+    }
+    
+    .profile{
+        margin-top: 30px;
+    }
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+    html,body{
+        margin-left:10px !important;
+        margin-right:10px !important;
+    }
+   
+    #footer-content{
+        padding-bottom: 0px;
+        font-size: 7px !important;
+    }
+
+    #logo img{
+        width: 45%;
+        margin-top: 10px;
+    }
+
+    .navigation-list li{
+        display: block;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
 }
